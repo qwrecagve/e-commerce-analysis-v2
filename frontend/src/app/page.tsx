@@ -34,7 +34,10 @@ export default function Dashboard() {
   const [data, setData] = useState<DashboardData | null>(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/summary')
+    // Azure-dagi backend manzili (Web App yaratilgandan so'ng)
+    const BACKEND_URL = process.env.NEXT_PUBLIC_API_URL || 'https://ecommerce-api-oybek.azurewebsites.net';
+    
+    fetch(`${BACKEND_URL}/api/summary`)
       .then(res => res.json())
       .then(setData)
       .catch(err => console.error('API Error:', err));
