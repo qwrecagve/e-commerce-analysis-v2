@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Analytics | Cloud Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="logo">
+                <span class="icon">📊</span>
+                <h1>E-Commerce Analysis</h1>
+            </div>
+            <div class="status">
+                <span class="dot"></span> Azure Cloud Online
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Asosiy ko'rsatkichlar -->
+            <div class="stats-row">
+                <div class="stat-card">
+                    <h3>Umumiy Tushum</h3>
+                    <p id="total-revenue">$0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Sotilgan Mahsulotlar</h3>
+                    <p id="total-sales">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Eng Faol Mavsum</h3>
+                    <p id="top-season">---</p>
+                </div>
+            </div>
+
+            <!-- Grafiklar -->
+            <div class="charts-row">
+                <div class="chart-container">
+                    <h3>📅 Oylik Sotuv Dinamikasi</h3>
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>🍂 Mavsumiy Tahlil</h3>
+                    <canvas id="seasonalChart"></canvas>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 E-Commerce Analytics System. Oybek Azure Cloud Platform.</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
